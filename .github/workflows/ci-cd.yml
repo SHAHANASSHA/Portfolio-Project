@@ -53,5 +53,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/my-portfolio-image:latest
             docker stop portfolio || true
             docker rm portfolio || true
-            docker run -d --name portfolio -p 1234:80 \
+            docker run -d --name portfolio -p 80:80 \
               ${{ secrets.DOCKER_USERNAME }}/my-portfolio-image:latest
