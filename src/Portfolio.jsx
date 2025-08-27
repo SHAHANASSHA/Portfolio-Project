@@ -22,7 +22,7 @@ function Portfolio() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <h2>About Me</h2>
+        <h2>ABOUT ME</h2>
         <p>I’m a passionate developer who loves building modern web apps 🚀</p>
       </motion.section>
 
@@ -33,7 +33,7 @@ function Portfolio() {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <h2>Skills</h2>
+        <h2>SKILLS</h2>
         <ul>
           <li>React.js</li>
           <li>Docker & Kubernetes</li>
@@ -48,7 +48,7 @@ function Portfolio() {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <h2>Projects</h2>
+        <h2>PROJECTS</h2>
         <p>Some cool projects will go here.</p>
       </motion.section>
 
@@ -60,7 +60,7 @@ function Portfolio() {
         transition={{ duration: 0.8 }}
       >
         <h2>Contact</h2>
-        <p>Email: you@example.com</p>
+        <p>Email: shashahanas5@gmail.com</p>
       </motion.section>
     </div>
   );
