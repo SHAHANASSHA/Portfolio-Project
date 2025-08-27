@@ -51,6 +51,9 @@ jobs:
           key: ${{ secrets.VPC_SSH_KEY }}
           script: |
             docker compose pull     # pull the latest image
+            docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+            docker stop portfolio_container || true
+            docker rm portfolio_container || true
             docker compose -f portfolio-cf.yml down     # stop old container
             docker compose -f portfolio-cf.yml up -d    # start new container
             docker ps -a
