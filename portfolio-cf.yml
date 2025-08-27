@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   portfolio:
-    image: shahanas190/my-portfolio:latest
+    image: shahanas190/portfolio-img:latest
     container_name: portfolio_container
       #ports:
       #- "1234:80"
