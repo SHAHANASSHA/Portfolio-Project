@@ -1,15 +1,13 @@
-version: "3.9"
-
+version: '3.9'
 services:
   portfolio:
-    image: shahanas190/portfolio-img:latest
-    container_name: portfolio_container
-      #ports:
-      #- "1234:80"
+    image: shahanas190/my-pf-image:latest
+    container_name: portfolio_con1
+    ports:
+      - "7676:80"
     networks:
       portfolio_net:
         ipv4_address: 172.28.0.5   # static IP inside the network
-
 networks:
   portfolio_net:
     driver: bridge

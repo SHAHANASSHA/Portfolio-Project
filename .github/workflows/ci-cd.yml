@@ -40,7 +40,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/portfolio-img:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-pf-img:latest
 
       # Deploy via SSH to VPC host
       - name: Deploy with Docker Compose
@@ -50,8 +50,7 @@ jobs:
           username: ${{ secrets.VPC_USER }}
           key: ${{ secrets.VPC_SSH_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio-img:latest
-            docker compose -f portfolio-cf.yml down     # stop old container
+            docker pull ${{ secrets.DOCKER_USERNAME }}/my-pf-img:latest
             docker compose -f portfolio-cf.yml up -d    # start new container
             docker ps -a
 
