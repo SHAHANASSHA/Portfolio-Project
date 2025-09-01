@@ -54,4 +54,4 @@ jobs:
             docker stop shahanas_portfolio || true
             docker rm shahanas_portfolio || true
             #docker network create shahanas-network6
-            docker run -d --name shahanas_portfolio --network shahanas-network  --ip 172.28.0.2 ${{ secrets.DOCKER_USERNAME }}/my-pf-image6:latest
+            docker run -d --name shahanas_portfolio --network shahanas-network  --ip 172.28.0.2 ${{ secrets.DOCKER_USERNAME }}/my-pf-image7:latest
