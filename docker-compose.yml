@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   portfolio:
-    image: shahanas190/my-pf-image:latest
+    image: king:latest
     container_name: portfolio_con1
     ports:
       - "7676:80"
