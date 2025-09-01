@@ -40,7 +40,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-pf-img2:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-pf-img3:latest
 
       # Deploy via SSH to VPC host
       - name: Deploy with Docker Compose
@@ -50,8 +50,8 @@ jobs:
           username: ${{ secrets.VPC_USER }}
           key: ${{ secrets.VPC_SSH_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKER_USERNAME }}/my-pf-img2:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/my-pf-img3:latest
             docker stop shahanas_portfolio || true
             docker rm shahanas_portfolio || true
-            docker run -d --name shahanas_portfolio --network shahanas-net -p 1212:80 my-pf-img2:latest
+            docker run -d --name shahanas_portfolio --network shahanas-net -p 1212:8081 my-pf-img3:latest
 
