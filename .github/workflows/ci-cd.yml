@@ -53,5 +53,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/my-pf-img1:latest
             docker stop portfolio-container || true
             docker rm portfolio-container || true
-          docker run --name portfolio --network shahanas-net -d -p 1212:8080 my-pf-img1:latest
+            docker run --name portfolio --network shahanas-net -d -p 1212:8080 my-pf-img1:latest
 
