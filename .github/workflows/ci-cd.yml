@@ -51,6 +51,6 @@ jobs:
           key: ${{ secrets.VPC_SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio-image1:latest
-            docker stop shahanas_portfolio || true
-            docker rm shahanas_portfolio || true
+            docker stop shahanas_portfolio1 || true
+            docker rm shahanas_portfolio1 || true
             docker run -d --name shahanas_portfolio1 --network shahanas-network  --ip 172.28.0.2 ${{ secrets.DOCKER_USERNAME }}/portfolio-image1:latest
